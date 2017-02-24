@@ -9,7 +9,7 @@
     "integration": "mocha ./_dev/test/integration/cheerio.js",
     "build": "webpack webpack.config.js",
     "watch": "npm run build -- --watch",
-    "prepublish": "echo \"Building...\" && npm run build"
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
