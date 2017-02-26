@@ -5,11 +5,6 @@ form:
       label: Main
       fields:
 
-        - name: uid
-          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
-          label: UID
-          defaultValue: mgnlCalc1
-
         - name: title
           class: info.magnolia.ui.form.field.definition.TextFieldDefinition
           label: Title
@@ -30,6 +25,14 @@ form:
           label: Formula
           defaultValue: "([A] * [B]) / 100"
           required: true
+
+    - name: tabHTML
+      label: HTML
+      fields:
+
+        - name: componentId
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: ID of component
 
 actions:
   commit:

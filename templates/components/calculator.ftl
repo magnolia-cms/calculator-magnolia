@@ -1,9 +1,8 @@
 [#-------------- ASSIGNMENTS --------------]
-[#assign uid = content.uid ! "calculator-magnolia-" + content.@id]
-
+[#assign componentId = content.componentId!"calculator-"+content.@id]
 
 [#-------------- RENDERING  --------------]
-<div id="${uid}" class="calculator">
+<div id="${componentId}" class="calculator">
   <h2>${content.title!}</h2>
 
   <label>
@@ -25,7 +24,7 @@
 <script>
 (function (window, $) {
   $(document).ready(function () {
-    var id = '#${uid!}'
+    var id = '#${componentId!}'
     new window.MgnlCalculator(id)
   })
 })(window, jQuery)

@@ -6,7 +6,7 @@ const assert = require('assert')
 const request = require('request')
 const cheerio = require('cheerio')
 
-const URL = 'http://superuser:superuser@localhost:8080/magnoliaAuthor/ci-testpage.html'
+const URL = 'http://superuser:superuser@localhost:8080/magnoliaAuthor/demo-calculator.html'
 
 // Magnolia server rejects the request if it does not appear to come from a browser.
 const USER_AGENT = {

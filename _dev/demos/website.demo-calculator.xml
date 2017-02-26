@@ -155,7 +155,7 @@
       <sv:property sv:name="title" sv:type="String">
         <sv:value>Interest Calculator</sv:value>
       </sv:property>
-      <sv:property sv:name="uid" sv:type="String">
+      <sv:property sv:name="componentId" sv:type="String">
         <sv:value>interestCalculator</sv:value>
       </sv:property>
       <sv:property sv:name="value1" sv:type="String">
@@ -205,7 +205,7 @@
       <sv:property sv:name="title" sv:type="String">
         <sv:value>Mortgage Calculator</sv:value>
       </sv:property>
-      <sv:property sv:name="uid" sv:type="String">
+      <sv:property sv:name="componentId" sv:type="String">
         <sv:value>mortgageCalculator</sv:value>
       </sv:property>
       <sv:property sv:name="value1" sv:type="String">
