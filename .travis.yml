@@ -3,8 +3,9 @@ node_js:
   - "6"
 
 env:
-  - MAGNOLIA_CE_VERSION=5.5.1
-  - MAGNOLIA_CE_VERSION=5.5
+  - MAGNOLIA_CE_VERSION=LATEST
+# Additional lines can be added to test against specific versions of Magnolia.
+#  - MAGNOLIA_CE_VERSION=5.5.1
 
 sudo: false
 addons:
@@ -26,7 +27,7 @@ before_script:
   - cd $REPO_NAME && npm run build && cd ..
 
   - cp -R $REPO_NAME magnolia/light-modules/
-  - cp magnolia/light-modules/$REPO_NAME/_dev/test/fixtures/website.ci-testpage.xml magnolia/apache-tomcat/webapps/magnoliaAuthor/WEB-INF/bootstrap/common
+  - cp magnolia/light-modules/$REPO_NAME/_dev/demos/website.demo-calculator.xml magnolia/apache-tomcat/webapps/magnoliaAuthor/WEB-INF/bootstrap/common
 
   - mkdir -p magnolia/apache-tomcat/logs/
   - touch magnolia/apache-tomcat/logs/catalina.out

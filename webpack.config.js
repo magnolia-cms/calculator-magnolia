@@ -4,7 +4,7 @@ module.exports = {
   entry: './_dev/js/app.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'webresources', 'js')
+    path: path.resolve(__dirname, 'webresources')
   },
 
   module: {
