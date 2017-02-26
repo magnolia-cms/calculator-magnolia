@@ -41,12 +41,15 @@ To include the ecessary resources you could add the following fragment to your p
 
 ## Tests
 
-This project illustrates how to test a shared Magnolia light module.
+> This project illustrates how to test a shared Magnolia light module.
 
 ### Magnolia Template / Integration tests
 
-Tests are super simple and based `cheerio`. Mocha is used as test runner.
-Fixture was exported from Magnolia using the "Export"-functionality of the UI
+The correct rendering of your template, including how it renders based on content entered with the dialog can be tested with a template test. This package demonstrates the following approach:
+* Create demo page with component configured in various ways via the dialog.
+* Export the page to an xml bootstrap file to `_dev/demos` directory.
+* Tests are super simple and based `cheerio`. Mocha is used as test runner.
+* Supply a travis-ci configuration so that your project will be automatically tested whenever it is pushed to github.
 
 
 ### JS Unit Tests
