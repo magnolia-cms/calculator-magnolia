@@ -1,7 +1,5 @@
-# Automatically generated dialog with few most often used fileds (text, right, link, DAM image, multivalue, link to app, select). Feel free to modify them for your specific component.
-
 form:
-  label: calculator
+  label: Calculator
   tabs:
     - name: tabMain
       label: Main

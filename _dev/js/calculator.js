@@ -7,9 +7,9 @@ class MgnlCalculator {
     this.selector = selector
     this.$el = $(this.selector)
 
-    this.$value1Field = this.$el.find('.mgnl-calculator__value1')
-    this.$value2Field = this.$el.find('.mgnl-calculator__value2')
-    this.$resultField = this.$el.find('.mgnl-calculator__result')
+    this.$value1Field = this.$el.find('.calculator__value1')
+    this.$value2Field = this.$el.find('.calculator__value2')
+    this.$resultField = this.$el.find('.calculator__result')
     this.formula = this.$resultField.attr('data-formula')
 
     this.registerListeners()

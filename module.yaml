@@ -1,0 +1,5 @@
+version: 0.0.2
+displayName: Calculator
+dependencies:
+  core:
+    version: 5.4.7/*

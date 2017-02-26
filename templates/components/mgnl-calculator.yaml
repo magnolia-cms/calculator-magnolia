@@ -1,4 +1,0 @@
-title: mgnl-calculator
-renderType: freemarker
-templateScript: /mgnl-calculator/templates/components/mgnl-calculator.ftl
-dialog: mgnl-calculator:components/mgnl-calculator

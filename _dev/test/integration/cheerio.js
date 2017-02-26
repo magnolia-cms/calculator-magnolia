@@ -1,31 +1,34 @@
-// mocha based tests
+/* Tests the rendered templates with mocha and cheerio.
+These tests depend on a demo page installed on a running magnolia instance.
+*/
 
 const assert = require('assert')
 const request = require('request')
 const cheerio = require('cheerio')
 
-const URL = 'http://localhost:8080/magnoliaPublic/ci-testpage.html'
+const URL = 'http://superuser:superuser@localhost:8080/magnoliaAuthor/ci-testpage.html'
+
+// Magnolia server rejects the request if it does not appear to come from a browser.
+const USER_AGENT = {
+  'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:51.0) Gecko/20100101 Firefox/51.0'
+}
 
 describe('integration test', () => {
 
   it('renders the template with the calculator', (done) => {
     request({
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:51.0) Gecko/20100101 Firefox/51.0'
-      },
+      headers: USER_AGENT,
       uri: URL
     }, (err, res, body) => {
       const $ = cheerio.load(body)
-      assert.equal($('.mgnl-calculator').length, 2)
+      assert.equal($('.calculator').length, 2)
       done()
     })
   }).timeout(10000)
 
   it('renders the interest calculator', (done) => {
     request({
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:51.0) Gecko/20100101 Firefox/51.0'
-      },
+      headers: USER_AGENT,
       uri: URL
     }, (err, res, body) => {
       const $ = cheerio.load(body)
@@ -41,9 +44,7 @@ describe('integration test', () => {
 
   it('renders the mortgage calendar', (done) => {
     request({
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:51.0) Gecko/20100101 Firefox/51.0'
-      },
+      headers: USER_AGENT,
       uri: URL
     }, (err, res, body) => {
       const $ = cheerio.load(body)

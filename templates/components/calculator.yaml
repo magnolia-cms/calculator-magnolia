@@ -1,0 +1,4 @@
+title: Calculator
+renderType: freemarker
+templateScript: /calculator-magnolia/templates/components/calculator.ftl
+dialog: calculator-magnolia:components/calculator

@@ -1,44 +1,59 @@
-[![Build Status](https://travis-ci.org/robertkowalski/mgnl-calculator.svg?branch=master)](https://travis-ci.org/robertkowalski/mgnl-calculator)
+[![Build Status](https://travis-ci.org/magnolia-cms/calculator-magnolia.svg?branch=master)](https://travis-ci.org/magnolia-cms/calculator-magnolia)
 
-# mgnl-calculator
+# calculator-magnolia
 
-Small calculator built with webpack.
+Simple configurable calculator, ie for interest or mortgage calculation - Component template for Magnolia CMS.
+
+> (Demonstrates how to test light modules)
+
+> (Demonstrates how to build resources with webpack)
 
 
 ## Features
 
-Customizable formula and form fields. Supports different ids for multiple instances on one page.
+Provide a simple calculator on a webpage to enable visitors to calculate a value based on a formula that you configure. Can be used to supply interest calculators, mortgage calculators, and the like. Calculator contains two fields.
 
-![](./preview-dialog.png)
-![](./preview-rendered.png)
+Content author can supply formula as well as labels for the two fields.
 
+Can be placed multiple times on one page.
+
+![](./_dev/README-calculator.png)
+
+![](./_dev/README-calculator-dialog.png)
 
 ## Usage
 
-Depends on jQuery 3.x
+Make the component available to authors, and include the files in `webresources` on your pages using standard magnolia techniques.
 
-After installation, add this to your page template:
+(To make this component available on the mtk basic page, you could use the decoration included in `_dev/decorations`.)
 
+### Depends on jQuery 3.x
+
+jQuery 3.x must be available on the page.
+
+To include the ecessary resources you could add the following fragment to your page template.
 ```
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src=".resources/mgnl-calculator/webresources/js/bundle.js"></script>
+<script src=".resources/calculator-magnolia/webresources/js/bundle.js"></script>
 
 ```
 
 
 ## Tests
 
-### Fixture Setup
+This project illustrates how to test a shared Magnolia light module.
 
+### Magnolia Template / Integration tests
+
+Tests are super simple and based `cheerio`. Mocha is used as test runner.
 Fixture was exported from Magnolia using the "Export"-functionality of the UI
+
 
 ### JS Unit Tests
 
 Unit tests are using Jest as test runner, as it supplies a DOM environment
 
-### Template / Integration tests
 
-Tests are super simple and based `cheerio`. Mocha is used as test runner
 
 ### Travis
 
@@ -48,9 +63,17 @@ Setting up the Magnolia server is done with the `before_script` hook.
 
 
 ## Information on Magnolia CMS
-
 This directory is a Magnolia 'light module'.
+
 https://docs.magnolia-cms.com
+
+Search the docs for `sharing light modules` for details on how to share and use light modules on npm and github.
+
+
+## Contribute to the Magnolia component ecosystem
+It's easy to create components for Magnolia and share them on github and npm. I invite you to do so and join the community. Let's stop wasting time by developing the same thing again and again, rather let's help each other out by sharing our work and create a rich library of components.
+
+Just add `magnolia-light-module` as a keyword to npm's package.json to make them easy to find and use on npm.
 
 
 ## License

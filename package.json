@@ -1,7 +1,7 @@
 {
-  "name": "mgnl-calculator",
-  "version": "0.0.1",
-  "description": "Calculator component",
+  "name": "calculator-magnolia",
+  "version": "0.0.2",
+  "description": "Simple configurable calculator, ie for interest or mortgage calculation - Component template for Magnolia CMS (Demonstrates how to test light modules)",
   "main": "index.js",
   "scripts": {
     "test": "npm run unit && npm run integration",
@@ -13,14 +13,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/robertkowalski/mgnl-calculator.git"
+    "url": "https://github.com/magnolia-cms/calculator-magnolia.git"
   },
   "keywords": [
-    "mgnl",
-    "magnolia",
-    "magnolia-light-module"
+    "magnolia-light-module",
+    "magnolia-component",
+    "testing",
+    "test"
   ],
-  "author": "Robert Kowalski <rok@kowalski.gd>",
+  "contributors": [
+    "Magnolia (https://magnolia-cms.com/)",
+    "Robert Kowalski <rok@kowalski.gd>"
+    ],
   "license": "MIT",
   "devDependencies": {
     "babel": "^6.5.2",
@@ -39,5 +43,10 @@
     "request": "^2.79.0",
     "style-loader": "^0.13.1",
     "webpack": "^2.2.1"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/magnolia-cms/calculator-magnolia/issues"
+  },
+  "homepage": "https://github.com/magnolia-cms/calculator-magnolia#readme"
+
 }
