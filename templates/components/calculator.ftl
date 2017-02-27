@@ -15,10 +15,13 @@
     <input class="calculator__value2"/>
   </label>
 
-  <input
-    data-formula="${content.formula!}"
-    disabled="true"
-    class="calculator__result" />
+  <label>
+    Result
+    <input
+      data-formula="${content.formula!}"
+      disabled="true"
+      class="calculator__result" />
+  </label>
 </div>
 
 <script>
