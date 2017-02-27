@@ -2,7 +2,7 @@
   "name": "calculator-magnolia",
   "version": "0.0.2",
   "description": "Simple configurable calculator, ie for interest or mortgage calculation - Component template for Magnolia CMS (Demonstrates how to test light modules)",
-  "main": "index.js",
+  "main": "webresources/bundle.js",
   "scripts": {
     "test": "npm run unit && npm run integration",
     "unit": "jest",
