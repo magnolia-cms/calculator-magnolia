@@ -7,7 +7,7 @@
     "test": "npm run unit && npm run integration",
     "unit": "jest",
     "integration": "mocha ./_dev/test/integration/cheerio.js",
-    "build": "webpack webpack.config.js",
+    "build": "webpack --config=webpack.config.js",
     "watch": "npm run build -- --watch",
     "prepublish": "npm run build"
   },
