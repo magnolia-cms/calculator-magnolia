@@ -7,7 +7,7 @@
     "test": "npm run unit && npm run integration",
     "unit": "jest",
     "integration": "mocha ./_dev/test/integration/cheerio.js",
-    "build": "webpack webpack.config.js",
+    "build": "webpack --config=webpack.config.js",
     "watch": "npm run build -- --watch",
     "prepublish": "npm run build"
   },
@@ -35,6 +35,7 @@
     "babel-preset-react": "^6.22.0",
     "cheerio": "^0.22.0",
     "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^2.0.0",
     "jest": "^18.1.0",
     "jquery": "^3.1.1",
     "less": "^2.7.2",
